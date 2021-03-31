@@ -1,1 +1,43 @@
-// TODO
+.container{
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  button{
+    color: var(--pink);
+    border: none;
+    background-color: transparent;
+    outline: none;
+
+    transition: filter 0.2s; 
+
+    &:hover{
+      filter: brightness(0.8);
+    }
+  }
+}
+
+.content {
+  margin-bottom: 4rem;
+
+  h1{
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 2.11rem;
+  }
+  p{
+    font-size: 1.125rem;
+    color: var(--dark-white);
+    margin: 1rem 0 2rem 0;
+  }
+
+  span{
+    font-size: 0.875rem;
+    line-height: 1.05875rem;
+    margin-right: 1rem;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+}
