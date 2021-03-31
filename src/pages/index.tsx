@@ -12,6 +12,7 @@ import styles from './home.module.scss';
 import { FiCalendar, FiUser } from 'react-icons/fi';
 import Prismic from "@prismicio/client"
 import { useState } from 'react';
+import Header from '../components/Header';
 
 interface Post {
   uid?: string;
@@ -46,13 +47,15 @@ export default function Home({ postsPagination }: HomeProps) {
   }
   return (
     <>
+      <Header />
+      
       <Head>
         <title>Home | spacetraveling</title>
       </Head>
 
-      <main className={styles.container}>
+      <main className={commonStyles.container}>
         {posts.map(post =>
-          <Link key={post.uid} href={`/posts/${post.uid}`}>
+          <Link key={post.uid} href={`/post/${post.uid}`}>
             <a>
               <section className={styles.content}>
                 <h1>{post.data.title}</h1>
